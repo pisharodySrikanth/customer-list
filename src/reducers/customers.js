@@ -22,7 +22,7 @@ const initialState = {
         gender: 'Male',
         location: 'Mumbai'
     }],
-    current: 2
+    current: -1
 };
 
 export default function(state=initialState, action) {
@@ -60,6 +60,11 @@ export default function(state=initialState, action) {
                 list
             };
         }
+        case types.SET_CURRENT_CUSTOMER:
+            return {
+                ...state,
+                current: payload.key
+            };
         default:
             return state;
     }

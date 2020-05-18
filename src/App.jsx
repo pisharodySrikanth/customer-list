@@ -8,9 +8,11 @@ import styles from './app.scss';
 import themeStyles from './theme.scss';
 
 const getTheme = ({theme}) => theme;
+const getCurrentKey = ({customers}) => customers.current
 
 const App = () => {
     const theme = useSelector(getTheme);
+    const current = useSelector(getCurrentKey);
     const dispatch = useDispatch();
 
     return (
@@ -32,6 +34,7 @@ const App = () => {
                 />
                 <CustomerForm 
                     className={styles['right-section']}
+                    key={current}
                 />
             </div>
         </div>

@@ -18,6 +18,7 @@
 }
 
 .item-name {
+    flex: 1;
     font-size: 1.25rem;
     margin-bottom: .3125rem;
 }
@@ -34,6 +35,11 @@
     }
 }
 
+.edit-btn {
+    margin-right: 1rem;
+}
+
+.edit-btn,
 .delete-btn {
     color: #4646c4;
     cursor: pointer;
