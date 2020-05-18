@@ -3,6 +3,7 @@ import {useSelector, useDispatch} from 'react-redux';
 import classnames from 'classnames';
 import List from './customer-list/List';
 import CustomerForm from './customer-form/CustomerForm';
+import Ad from './ad/Ad';
 import {toggleTheme} from './actions/theme';
 import styles from './app.scss';
 import themeStyles from './theme.scss';
@@ -17,6 +18,7 @@ const App = () => {
 
     return (
         <div className={classnames(styles['app'], themeStyles[theme + '-theme'])}>
+            <Ad />
             <div className={styles['header']}>
                 <div className={styles['title']}>
                     Customer List
