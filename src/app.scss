@@ -1,0 +1,39 @@
+.app {
+    height: 100vh;
+    transition: all ease-out 0.3s;
+}
+
+.header {
+    height: 100px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.theme-toggle {
+    position: absolute;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.content-container {
+    display: flex;
+    margin: 1rem;
+}
+
+.left-section {
+    flex: 1;
+    margin-right: 10px;
+    border: 1px solid #ededed;
+}
+
+.right-section {
+    flex: 0 0 20rem;
+}
+

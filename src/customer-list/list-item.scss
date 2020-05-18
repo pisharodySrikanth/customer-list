@@ -1,0 +1,24 @@
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    min-height: 50px;
+    padding: 0 1rem;    
+    &:not(:last-child):after {
+        content: "";
+        width: calc(100% - 2rem);
+        position: absolute;
+        bottom: 0;
+        border-top: 1px solid #ededed;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+.delete-btn {
+    color: #4646c4;
+    cursor: pointer;
+    &:hover {
+        text-decoration: underline;
+    }
+}
