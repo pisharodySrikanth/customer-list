@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 import styles from './input.scss';
 import classnames from 'classnames';
 
@@ -25,4 +25,4 @@ const Input = ({
     );
 }
 
-export default Input;
+export default memo(Input);

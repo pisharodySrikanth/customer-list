@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, memo} from 'react';
 import {useDispatch} from 'react-redux';
 import {deleteCustomer} from '../actions/customers';
 import styles from './list-item.scss';
@@ -26,21 +26,17 @@ const ListItem = props => {
                 className={styles['delete-btn']}
                 onClick={onDelete}
             >Delete</div>
-            {expanded ? (
-                <>
-                    {expandedKeys.map(key => (
-                        <div
-                            key={key}
-                            className={styles['spec']}
-                        >
-                            <div className={styles['spec-key']}>{key}:</div>
-                            <div className={styles['spec-value']}>{props[key]}</div>
-                        </div>
-                    ))}
-                </>
-            ) : null}
+            {expanded ? expandedKeys.map(key => (
+                <div
+                    key={key}
+                    className={styles['spec']}
+                >
+                    <div className={styles['spec-key']}>{key}:</div>
+                    <div className={styles['spec-value']}>{props[key]}</div>
+                </div>
+            )) : null}
         </div>
     )
 };
 
-export default ListItem;
+export default memo(ListItem);

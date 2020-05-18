@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useCallback} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import styles from './customer-form.scss';
 import classnames from 'classnames';
@@ -38,11 +38,11 @@ const CustomerForm = props => {
         });
     });
 
-    const handleChange = (index, value) => setValues(values => {
+    const handleChange = useCallback((index, value) => setValues(values => {
         const copy = [...values];
         copy[index] = value;
         return copy;
-    });
+    }), []);
 
     const handleSubmit = e => {
         e.preventDefault();

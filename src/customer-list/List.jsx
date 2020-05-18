@@ -11,14 +11,12 @@ const List = props => {
 
     return (
         <div className={classnames(styles['list'], props.className)}>
-            {customers.map(item => {
-                return (
-                    <ListItem 
-                        {...item}
-                        custKey={item.key}
-                    />
-                );
-            })}
+            {customers.map(item => (
+                <ListItem 
+                    {...item}
+                    custKey={item.key}
+                />
+            ))}
         </div>
     );
 };1
