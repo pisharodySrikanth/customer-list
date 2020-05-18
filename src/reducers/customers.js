@@ -3,13 +3,22 @@ import types from '../actions/types';
 const initialState = {
     list: [{
         name: 'Srikanth',
-        key: 12
+        key: 12,
+        age: 24,
+        gender: 'Male',
+        location: 'Mumbai'
     }, {
         name: 'Ramesh',
-        key: 13
+        key: 13,
+        age: 24,
+        gender: 'Male',
+        location: 'Mumbai'
     }, {
         name: 'Suresh',
-        key: 14
+        key: 14,
+        age: 24,
+        gender: 'Male',
+        location: 'Mumbai'
     }],
     current: -1
 };
