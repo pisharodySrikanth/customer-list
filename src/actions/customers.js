@@ -1,8 +1,8 @@
 import types from './types';
 
-export function addCustomer(payload) {
+export function addEditCustomer(payload) {
     return {
-        type: types.ADD_CUSTOMER,
+        type: types.ADD_EDIT_CUSTOMER,
         payload
     };
 }
