@@ -1,9 +1,10 @@
 .ad-container {
     display: flex;
     justify-content: center;
-}
-
-.iframe {
     width: 1366px;
-    background: #fff;
+    margin: auto;
+    iframe {
+        width: 100%;
+        background: #fff;
+    }
 }
