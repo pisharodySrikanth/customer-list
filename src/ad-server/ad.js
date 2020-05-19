@@ -1,5 +1,5 @@
-function loadScript() {
-    const xhttp = new XMLHttpRequest();
+function fetchAd() {
+    var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if(this.readyState !== 4 || this.status !== 200) {
             return;
@@ -13,10 +13,12 @@ function loadScript() {
 }
 
 function renderIframe(src) {
-    const iframe = document.createElement('iframe');
+    var iframe = document.createElement('iframe');
     iframe.src = src;
+    iframe.style.width = '100%';
+    iframe.style.background = '#fff';
 
     document.getElementById('ad-container').appendChild(iframe);
 }
 
-loadScript();
+window.addEventListener('load', fetchAd);
